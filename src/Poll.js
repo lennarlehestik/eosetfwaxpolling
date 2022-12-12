@@ -184,7 +184,7 @@ function Poll(props) {
             })
               .then((response) =>
                 response.json().then((price) => {
-                  if (price?.rows[0]?.pool1?.quantity?.split(" ")[1] !== "EOS") {
+                  if (price?.rows[0]?.pool1?.quantity?.split(" ")[1] !== "WAX") {
                     const price0_last = Number(price?.rows[0]?.pool2?.quantity?.split(" ")[0]) / Number(price?.rows[0]?.pool1?.quantity?.split(" ")[0]);
                     console.log(price0_last + "PRICE0")
                     tokendata.rows[index].price = price0_last
